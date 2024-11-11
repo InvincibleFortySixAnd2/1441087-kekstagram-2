@@ -23,9 +23,7 @@ const checkMeetingTime = (dayStart = '', dayEnd = '', meetingStart = '', meeting
   const dayEndMunites = convertTimeStringToMinutes(dayEnd);
   const meetingStartMunites = convertTimeStringToMinutes(meetingStart);
 
-  if (meetingStartMunites >= dayStartMunites && meetingStartMunites <= (dayEndMunites - meetingDuration)) {
-    return true;
-  }
-  return false;
+  return meetingStartMunites >= dayStartMunites && meetingStartMunites <= (dayEndMunites - meetingDuration);
 };
+
 checkMeetingTime();
